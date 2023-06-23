@@ -62,6 +62,17 @@ a{
     background-image: linear-gradient(to bottom right, #1c1c1c, #001f33);
 }
 
+.card-box-body {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bg-footer{
+    background-color: #001f33;
+}
+
 .bg-theme{
 
     color: var( --bs-supporting-color);

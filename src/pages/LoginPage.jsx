@@ -1,10 +1,18 @@
-import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+// import { Redirect, useHistory } from "react-router-dom";
 
 function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const history = useHistory();
+  const [loggedIn, setLoggedIn] = useState(false);
+  // const history = useHistory();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      setLoggedIn(true);
+    }
+  }, []);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -15,7 +23,7 @@ function LoginPage() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ username, password }),
       });
 
       if (response.ok) {
@@ -25,8 +33,8 @@ function LoginPage() {
         // Save the token in localStorage
         localStorage.setItem("token", token);
 
-        // Login successful, redirect to home page
-        history.push("/");
+        // Set the logged in state to true
+        setLoggedIn(true);
       } else {
         // Login failed, display error message
         console.error("Login failed");
@@ -36,16 +44,21 @@ function LoginPage() {
     }
   };
 
+  if (loggedIn) {
+    // return <Redirect to="/" />;
+    console.log(token)
+  }
+
   return (
     <div>
       <h2>Login Page</h2>
       <form onSubmit={handleLogin}>
         <div>
-          <label>Email:</label>
+          <label>Username</label>
           <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
             required
           />
         </div>

@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 function Services() {
   return (
-    <section className="services-section">
+    <section className="services-section bg-main-body">
       <div className="container text-center common-title fw-bold">
-        <h2 className="common-heading">
+        <h2 className="common-heading text-light">
           What We Will Do For <br /> Our Customers
         </h2>
         <hr className="w-25 mx-auto" />
@@ -13,10 +13,10 @@ function Services() {
 
       {/* plx download the images, gifs from Pixcap Website here http://bit.ly/3zJ49Q7 */}
 
-      <div className="container mt-5">
+      <div className="container mt-5 text-light">
         <div className="row g-5">
           <div className="col-xxl-4 col-lg-4 col-12">
-            <div className="card-box rounded-2 p-5 text-center">
+            <div className="card-box rounded-2 p-5 text-center text-light">
               <img
                 alt="GIF Image"
                 className="img-fluid"
@@ -24,8 +24,8 @@ function Services() {
                 width="200px"
               />
 
-              <h5 className="my-3 fw-normal">Loans</h5>
-              <p className="pe-3 mb-5">
+              <h5 className="my-3 fw-normal text-light">Loans</h5>
+              <p className="pe-3 mb-5 text-light">
                 Hunky dory barney fanny around up the duff no biggie loo cup of
                 tea jolly good ruddy say arse!
               </p>

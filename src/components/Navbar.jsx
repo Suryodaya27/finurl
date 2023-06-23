@@ -1,6 +1,13 @@
 import { Link } from "react-router-dom";
 
-export const Navbar = () => {
+function Navbar () {
+  const token = localStorage.getItem("token");
+
+  const handleLogout = () => {
+    // Remove the token from localStorage
+    localStorage.removeItem("token");
+  };
+
   return (
     <nav className="navbar navbar-expand-lg bg-color py-4 pt-lg-4">
       <div className="container">
@@ -29,30 +36,61 @@ export const Navbar = () => {
                 About
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/services">
+            <li className="nav-item dropdown">
+              <Link
+                className="nav-link dropdown-toggle"
+                to="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 Services
               </Link>
+              <ul className="dropdown-menu ">
+                <li>
+                  <Link className="dropdown-item" to="/services/loans">
+                    loans
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="#">
+                    Credit Cards
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item " to="#">
+                    Insurance
+                  </Link>
+                </li>
+              </ul>
             </li>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
             <li className="nav-item">
               <Link className="nav-link" to="/contact.html">
                 Contact
               </Link>
             </li>
             <li className="nav-item">
-              {/* <Link className="nav-link" to="/contact.html">Contact</Link> */}
-              <Link
-                className="nav-link text-light fw-bold rounded-2"
-                to="/login"
-              >
-                Login
-              </Link>
+              {token ? (
+                <>
+                  <Link className="nav-link" to="/profile">
+                    Profile
+                  </Link>
+                  <Link
+                    className="nav-link text-light fw-bold rounded-2"
+                    to="/"
+                    onClick={handleLogout}
+                  >
+                    Logout
+                  </Link>
+                </>
+              ) : (
+                <Link
+                  className="nav-link text-light fw-bold rounded-2"
+                  to="/login"
+                >
+                  Login
+                </Link>
+              )}
             </li>
           </ul>
         </div>
@@ -60,3 +98,5 @@ export const Navbar = () => {
     </nav>
   );
 };
+
+export default Navbar

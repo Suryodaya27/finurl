@@ -1,8 +1,11 @@
 import React from "react";
+import Loans from "./Loans";
+import BasicCard from "../components/Card";
+import WhyChooseUs from "./Choose";
 
 function Home() {
   return (
-    <>
+    <main className="bg-main-body">
       <section className="bg-main bg-color bg-main-body hero-section">
         <div className="container">
           <div className="row mb-5">
@@ -75,131 +78,9 @@ function Home() {
           </div>
         </section>
       </section>
-      <section className="common-section blog-section">
-        <div className="common-heading container text-center common-title mt-5 ">
-          <h2 className="common-heading">
-            Why Choose Us
-          </h2>
-          <hr className="w-25 mx-auto" />
-        </div>
-
-        <div className="container my-5">
-          <div className="row g-5">
-            <div className="col-xl-3 col-md-6 col-12">
-              <div className="d-flex justify-content-center align-items-center">
-                <div className="card" style={{ width: "18rem" }}>
-                  <img
-                    alt="..."
-                    className="card-img-top"
-                    src="./images/1.png"
-                  />
-                  <div className="card-body">
-                    <div className="d-flex justify-content-between">
-                      <p className="small text-grey ">
-                        <i className="fa-solid fa-book-open-reader"></i> : 5000{" "}
-                      </p>
-                      <p className="small text-grey "> March 3, 2020 </p>
-                    </div>
-                    <h5 className="card-title mt-3">Web Development</h5>
-                    <p className="card-text mt-2 mb-3">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a className="px-4 py-2 btn btn-dark" href="#">
-                      Read More
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-xl-3 col-md-6 col-12">
-              <div className="d-flex justify-content-center align-items-center">
-                <div className="card" style={{ width: "18rem" }}>
-                  <img
-                    alt="..."
-                    className="card-img-top"
-                    src="./images/2.png"
-                  />
-                  <div className="card-body">
-                    <div className="d-flex justify-content-between">
-                      <p className="small text-grey ">
-                        <i className="fa-solid fa-book-open-reader"></i> : 5000{" "}
-                      </p>
-                      <p className="small text-grey "> March 3, 2020 </p>
-                    </div>
-                    <h5 className="mt-3 card-title">Freelancing</h5>
-                    <p className="card-text mt-2 mb-3">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a className="px-4 py-2 btn btn-dark" href="#">
-                      Read More
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-xl-3 col-md-6 col-12">
-              <div className="d-flex justify-content-center align-items-center">
-                <div className="card" style={{ width: "18rem" }}>
-                  <img
-                    alt="..."
-                    className="card-img-top"
-                    src="./images/3.png"
-                  />
-                  <div className="card-body">
-                    <div className="d-flex justify-content-between">
-                      <p className="small text-grey ">
-                        <i className="fa-solid fa-book-open-reader"></i> : 5000{" "}
-                      </p>
-                      <p className="small text-grey "> March 3, 2020 </p>
-                    </div>
-                    <h5 className="mt-3 card-title">Graphic Designer</h5>
-                    <p className="card-text mt-2 mb-3">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a className="px-4 py-2 btn btn-dark " href="#">
-                      Read More
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-xl-3 col-md-6 col-12">
-              <div className="d-flex justify-content-center align-items-center">
-                <div className="card" style={{ width: "18rem" }}>
-                  <img
-                    alt="..."
-                    className="card-img-top"
-                    src="./images/4.png"
-                  />
-                  <div className="card-body">
-                    <div className="d-flex justify-content-between">
-                      <p className="small text-grey ">
-                        <i className="fa-solid fa-book-open-reader"></i> : 5000{" "}
-                      </p>
-                      <p className="small text-grey "> March 3, 2020 </p>
-                    </div>
-                    <h5 className="mt-3 card-title">Wordpress </h5>
-                    <p className="card-text mt-2 mb-3">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a className="px-4 py-2 btn btn-dark" href="#">
-                      Read More
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+      <Loans/>
+      <WhyChooseUs/>
+    </main>
   );
 }
 

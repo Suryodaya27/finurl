@@ -2,54 +2,11 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="main-footer-section">
-      <div className="contact-details">
-        <div className="container px-5">
-          <div className="row g-0">
-            <div className="col-lg-4">
-              <div className="contact-div p-5 d-flex flex-column justify-content-center align-items-center">
-                <div className="icon-div d-flex justify-content-center align-items-center rounded-circle mb-3">
-                  <img
-                    src="../images/call.gif"
-                    alt="GIF Image"
-                    className="img-fluid"
-                  />
-                  {/* plx download the images, gifs from here http://bit.ly/3zJ49Q7 */}
-                </div>
-                <p className="text-white">(+00) 1234 5678</p>
-              </div>
-            </div>
+    <footer className="bg-footer">
+      <div className="contact-details bg-footer">
 
-            <div className="col-lg-4">
-              <div className="contact-div p-5 d-flex flex-column justify-content-center align-items-center">
-                <div className="icon-div d-flex justify-content-center align-items-center rounded-circle mb-3">
-                  {/* <i className="fa-solid fa-phone"></i> */}
-                  <img
-                    src="../images/email.gif"
-                    alt="GIF Image"
-                    className="img-fluid"
-                  />
-                </div>
-                <p className="text-white">(+00) 1234 5678</p>
-              </div>
-            </div>
 
-            <div className="col-lg-4">
-              <div className="contact-div p-5 d-flex flex-column justify-content-center align-items-center">
-                <div className="icon-div d-flex justify-content-center align-items-center rounded-circle mb-3">
-                  <img
-                    src="../images/map.gif"
-                    alt="GIF Image"
-                    className="img-fluid"
-                  />
-                </div>
-                <p className="text-white">(+00) 1234 5678</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="footer-section py-5 text-white">
+        <div className="footer-section py-3 text-white">
           <div className="container">
             <div className="row">
               <div className="col-lg-2 col-md-6 col-6">
@@ -113,10 +70,10 @@ function Footer() {
         </div>
 
         <div className="container">
-          <hr className="container mx-auto" />
+          <hr className="container mx-auto text-light" />
 
           <div className="row">
-            <div className="col-lg-8 col-12">
+            <div className="col-lg-8 col-12 text-light">
               Copyright ©2023 All rights reserved. | This template is made with
               by <span className="bg-theme">Finurl.com</span>
             </div>
